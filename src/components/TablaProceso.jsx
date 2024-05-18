@@ -1,6 +1,16 @@
-import React from 'react'
+import { useContext } from 'react';
+import { ContextCart } from '../context/CartContext';
+import ElementTask from './ElementTask';
 
 const TablaProceso = ({getList, draggingOver, onDrop, startDrag}) => {
+
+    const { tareas, setTareas } = useContext(ContextCart)
+
+    const deleteProdFunction = (id) =>{
+        const newList = tareas.filter((element)=> element.id != id)
+        setTareas(newList)
+    }
+
     return (
         <>
             <div className="column column--2">
@@ -14,14 +24,7 @@ const TablaProceso = ({getList, draggingOver, onDrop, startDrag}) => {
                 >
                     <div className="dd-element">
                         {getList(2).map(item => (
-                            <div className="dd-element" key={item.id} draggable onDragStart={(evt) => startDrag(evt, item)}>
-                                <strong className="title">
-                                    {item.title}
-                                </strong>
-                                <p className="body">
-                                    {item.body}
-                                </p>
-                            </div>
+                            <ElementTask key={item.id} item={item} deleteProdFunction={deleteProdFunction} startDrag={startDrag} />
                         ))}
                     </div>
                 </div>

@@ -138,8 +138,8 @@ body{
 
 .dd-element .body{
     font-size: 14px;
-    margin-top: 20px;
-    margin-bottom: 0;
+    margin-top: 10px;
+    margin-bottom:5px;
 }
 
 .buttonAddTarea{
@@ -216,6 +216,8 @@ body{
   padding: 8px;
   border: none;
   outline: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .inputNuevaTarea:focus{
@@ -260,4 +262,33 @@ body{
   font-size: 15px;
   color: #585858;
   background-color: #f4f4f5;
+}
+
+.labelTitleVacio{
+  color:red;
+  font-weight: bold;
+}
+
+.delElement{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #dbd0d0;
+  background-color: #ad4f4f;
+  opacity: 0.7;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3 ease;
+}
+
+.delElement:hover{
+  opacity: 1;
 }
