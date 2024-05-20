@@ -10,13 +10,17 @@ const ModalNuevaTarea = ({ closeModal }) => {
     const [titleVacio, setTitleVacio] = useState(false)
 
     const handleAddTarea = () => {
+        const currentDate = new Date()
+        const fecha = currentDate.getDate() + "/" + (currentDate.getMonth() + 1) + "/" + currentDate.getFullYear()
+        const hora = currentDate.getHours() + ":" + currentDate.getMinutes()
         let nuevoId = generadorRandomId()
         if (!tituloInput == "") {
             const nuevoObj = {
                 id: nuevoId,
                 title: tituloInput,
                 body: descriptionInput,
-                list: 1
+                list: 1,
+                date: `${fecha} - ${hora}`
             }
             setTareas([...tareas, nuevoObj])
             setTitleVacio(false)

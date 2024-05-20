@@ -96,6 +96,7 @@ body{
 
 .column--1 .title{
     color: #4a98ff;
+    font-size: 23px;
 }
 
 .column--2{
@@ -104,6 +105,7 @@ body{
 
 .column--2 .title{
     color: #f0a147;
+    font-size: 23px;
 }
 
 .column--3{
@@ -112,6 +114,7 @@ body{
 
 .column--3 .title{
     color: #6FD2AF;
+    font-size: 23px;
 }
 
 /* DRAG AND DROP */
@@ -137,7 +140,7 @@ body{
 }
 
 .dd-element .body{
-    font-size: 14px;
+    font-size: 18px;
     margin-top: 10px;
     margin-bottom:5px;
 }
@@ -291,4 +294,8 @@ body{
 
 .delElement:hover{
   opacity: 1;
+}
+
+.elementDate{
+  font-size: 10px;
 }

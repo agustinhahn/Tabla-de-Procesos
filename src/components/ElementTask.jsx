@@ -3,6 +3,7 @@ import React from 'react'
 const ElementTask = ({deleteProdFunction,item, startDrag}) => {
     return (
         <div className="dd-element" draggable onDragStart={(evt) => startDrag(evt, item)}>
+        <p className='elementDate'>{item.date}</p>
         <strong className="title">
             {item.title}
         </strong>
