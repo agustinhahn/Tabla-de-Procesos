@@ -20,7 +20,8 @@ const ModalNuevaTarea = ({ closeModal }) => {
                 title: tituloInput,
                 body: descriptionInput,
                 list: 1,
-                date: `${fecha} - ${hora}`
+                date: `${fecha} - ${hora}`,
+                finishDate: ""
             }
             setTareas([...tareas, nuevoObj])
             setTitleVacio(false)

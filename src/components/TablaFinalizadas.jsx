@@ -24,7 +24,7 @@ const TablaFinalizadas = ({getList, draggingOver, onDrop, startDrag}) => {
                 >
                     <div className="dd-element">
                         {getList(3).map(item => (
-                            <ElementTask key={item.id} item={item} deleteProdFunction={deleteProdFunction} startDrag={startDrag} />
+                            <ElementTask key={item.id} item={item} deleteProdFunction={deleteProdFunction} startDrag={startDrag} getList={3} />
                         ))}
                     </div>
                 </div>
